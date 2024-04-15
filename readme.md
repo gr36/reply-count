@@ -1,6 +1,8 @@
 # Reply Count For Micro.blog
 This plugin allows you to display how many replies your micro.blog posts have - it's a vanity, nothing more.
 
+![](https://github.com/gr36/search-partial/raw/main/docs/replies.png)
+
 ## SetUp
 
 Instal the plugin from Github by clicking design, edit theme, and then add new plugin.
@@ -16,14 +18,9 @@ Simply add {{ partial "replycount.html" . }} to your page and the number of repl
 This can be used in a single post, or in a loop of posts. Each reply count is place in a uniquie div element. 
 
 ## Styling
+You can then style the block however you like using the class `replies`. The count number itself sits inside an inline-block class `reply_count`.
 
-You can then style the div however you like using the class `reply_count`. If you wish to add other things sround it, it might be an idea to include the following as a minimum. 
+## Config
+To aid styling you can add in your own emoji to appear before the number, as well as your own text to appear afterwards. These can both also be turned on and off as you wish in the plugin config.
 
-```
-.reply_count {
-    display: inline-block;
-}
-```
-
-## Future updates
-I plan to improve the way this works inclusing options and elements for styling in a config pannel - however no promices. 
+![](https://github.com/gr36/search-partial/raw/main/docs/settings.png)
