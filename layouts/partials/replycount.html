@@ -4,30 +4,22 @@
     if (response.ok) {
       return response.json(); // Parse the response data as JSON
     } else {
-      throw new Error('Failed to fetch webmentions');
+      throw new Error('API request failed');
     }
   })
   .then(data => {
     // Process the response data here
 
-    const postTitle = '{{ .Title | urlize }}';
-    const replyCount = data.items.length;
-
-    const replyCountObj = {
-      [postTitle]: replyCount
-    };
-
-    // Update HTML element with the reply count
-    const replyNumberElement = document.getElementById(`${postTitle}replyNumber`);
-    if (replyNumberElement) {
-      replyNumberElement.innerHTML = ` ${replyCountObj[postTitle]}`;
-    } else {
-      console.error(`Element with id "${postTitle}replyNumber" not found.`);
+    var obj = {
+        {{ .Title | urlize }}: data.items.length
     }
+
+    document.getElementById("{{ .Title | urlize }}replyNumber").innerHTML =  ' ' + obj[{{ .Title | urlize }}]; // put count into page
+
   })
   .catch(error => {
     // Handle any errors here
-    console.error('Error fetching webmentions:', error);
+    console.error(error); // Example: Logging the error to the console
   });
 </script>
 
