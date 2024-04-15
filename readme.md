@@ -14,3 +14,13 @@ Add the partial to the page you wish this to show on, for example, in your post 
 Simply add {{ partial "replycount.html" . }} to your page and the number of replies to that specific post will appear.
 
 This can be used in a single post, or in a loop of posts. Each reply count is place in a uniquie div element. 
+
+## Styling
+
+You can then style the div however you like using the class `reply_count`. If you wish to add other things sround it, it might be an idea to include the following as a minimum. 
+
+```
+.reply_count {
+    display: inline-block;
+}
+```
