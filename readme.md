@@ -24,3 +24,6 @@ You can then style the div however you like using the class `reply_count`. If yo
     display: inline-block;
 }
 ```
+
+## Future updates
+I plan to improve the way this works inclusing options and elements for styling in a config pannel - however no promices. 
