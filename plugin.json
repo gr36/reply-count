@@ -4,10 +4,20 @@
     "description": "Add the reply count to your micro.blog posts.",
     "fields": [
         {
+            "field": "params.reply_count_show_emoji",
+            "label": "Show Emoji before the count",
+            "type": "boolean"
+          },
+        {
           "field": "params.reply_count_emoji_before",
           "label": "Emoji before the count",
           "placeholder": "👋"
         },
+        {
+            "field": "params.reply_count_show_text",
+            "label": "Show text before the count",
+            "type": "boolean"
+          },
         {
           "field": "params.reply_count_text_after",
           "label": "Text to appear after the count",

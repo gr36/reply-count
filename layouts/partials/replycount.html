@@ -20,7 +20,7 @@
     // Update HTML element with the reply count
     const replyNumberElement = document.getElementById(`${postTitle}replyNumber`);
     if (replyNumberElement) {
-      replyNumberElement.innerHTML = ` ${replyCountObj[postTitle]}`;
+      replyNumberElement.innerHTML = ` ${replyCountObj[postTitle]}&nbsp;`;
     } else {
       console.error(`Element with id "${postTitle}replyNumber" not found.`);
     }
@@ -32,7 +32,11 @@
 </script>
 
 <div class="replies">
+  {{ if $.Site.Params.show_emoji  }}
   {{- $.Site.Params.reply_count_emoji_before }}
-  <div class="reply_count" id="{{ .Title | urlize }}replyNumber"></div>
+  {{ end }}
+  <div class="reply_count" style="display: inline-block;" id="{{ .Title | urlize }}replyNumber"></div>
+  {{ if $.Site.Params.show_text  }}
   {{- $.Site.Params.reply_count_text_after }}
+  {{ end }}
 </div>
