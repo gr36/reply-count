@@ -1,6 +1,18 @@
 {
     "version": "1.0.0",
     "title": "Show Reply Count",
-    "description": "Add the reply count to your micro.blog posts."
+    "description": "Add the reply count to your micro.blog posts.",
+    "fields": [
+        {
+          "field": "params.reply_count_emoji_before",
+          "label": "Emoji before the count",
+          "placeholder": "👋"
+        },
+        {
+          "field": "params.reply_count_text_after",
+          "label": "Text to appear after the count",
+          "placeholder": "Replies"
+        }
+    ]
 }
   

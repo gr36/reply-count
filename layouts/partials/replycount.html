@@ -31,4 +31,8 @@
   });
 </script>
 
-<div class="reply_count" id="{{ .Title | urlize }}replyNumber"></div>
+<div class="replies">
+  {{- $.Site.Params.reply_count_emoji_before }}
+  <div class="reply_count" id="{{ .Title | urlize }}replyNumber"></div>
+  {{- $.Site.Params.reply_count_text_after }}
+</div>

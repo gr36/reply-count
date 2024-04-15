@@ -1,1 +1,6 @@
-{}
+{
+    "params": {
+      "reply_count_emoji_before": "👋",
+      "reply_count_text_after": "Replies"
+    }
+  }
