@@ -1,0 +1,34 @@
+<script>
+    fetch("https://micro.blog/webmention?target=" + {{ .Permalink }})
+  .then(response => {
+    if (response.ok) {
+      return response.json(); // Parse the response data as JSON
+    } else {
+      throw new Error('Failed to fetch webmentions');
+    }
+  })
+  .then(data => {
+    // Process the response data here
+
+    const postTitle = '{{ .Title | urlize }}';
+    const replyCount = data.items.length;
+
+    const replyCountObj = {
+      [postTitle]: replyCount
+    };
+
+    // Update HTML element with the reply count
+    const replyNumberElement = document.getElementById(`${postTitle}replyNumber`);
+    if (replyNumberElement) {
+      replyNumberElement.innerHTML = ` ${replyCountObj[postTitle]}`;
+    } else {
+      console.error(`Element with id "${postTitle}replyNumber" not found.`);
+    }
+  })
+  .catch(error => {
+    // Handle any errors here
+    console.error('Error fetching webmentions:', error);
+  });
+</script>
+
+<div id="{{ .Title | urlize }}replyNumber"></div>
