@@ -11,7 +11,7 @@ Call the plugin anything you wish, copy in the URL from [the Github page](https:
 ### Add Partial
 Add the partial to the place you wish this to show, for example this may go in the meta information for the post. This can be used in a single post, or in a loop of posts. Each reply count is place in a unique div element so feel free to experiment. 
 
-Simply add  ```{ partial "replycount.html" . }}``` to your page and the number of replies to that specific post will appear.
+Simply add  ```{{ partial "replycount.html" . }}``` to your page and the number of replies to that specific post will appear.
 
 ### Styling
 You can style the block however you like using the class `replies`. The count number itself sits inside an inline-block class `reply_count`.
