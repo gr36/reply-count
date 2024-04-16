@@ -29,3 +29,4 @@ If you found this plugin useful, please consider [buying me a coffee](https://ww
 
 Check out my other plugins for micro.blog
 - [Search Partial](https://github.com/gr36/search-partial)
+- [Status log](https://github.com/gr36/status-log)
