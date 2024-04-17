@@ -19,14 +19,13 @@ You can style the block however you like using the class `replies`. The count nu
 ## Config
 To aid styling you can add in your own emoji to appear before the number, as well as your own text to appear afterwards. If thats not your thing then either options can be toggled on/off in the plugin settings.
 
-![](https://github.com/gr36/reply-count/raw/main/docs/settings.png)
+![](https://github.com/gr36/search-partial/raw/main/docs/settings.png)
 
-## Credits
-Thanks to [Manton](https://www.manton.org) for creating micro.blog and for making the API so well rounded and easy to interact with.
+## Change Log
 
-## Support Me
-If you found this plugin useful, please consider [buying me a coffee](https://www.buymeacoffee.com/gregmorris)
+1.0 Initial Release
+1.1 Add in option for different text dependent on single or multiple replies // count does not show if no replies
 
-Check out my other plugins for micro.blog
-- [Search Partial](https://github.com/gr36/search-partial)
-- [Status log](https://github.com/gr36/status-log)
+### Future Updates
+- ability to cutomise how zero replies show
+- custom styling dependent on level of replies

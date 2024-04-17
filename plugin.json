@@ -1,5 +1,5 @@
 {
-    "version": "1.0.0",
+    "version": "1.1.0",
     "title": "Show Reply Count",
     "description": "Add the reply count to your micro.blog posts.",
     "fields": [
@@ -14,13 +14,13 @@
           "placeholder": "👋"
         },
         {
-            "field": "params.reply_count_show_text",
-            "label": "Show text before the count",
-            "type": "boolean"
-          },
+          "field": "params.reply_count_text_single",
+          "label": "Text to appear after a single reply",
+          "placeholder": "Reply"
+        },
         {
-          "field": "params.reply_count_text_after",
-          "label": "Text to appear after the count",
+          "field": "params.reply_count_text_multiple",
+          "label": "Text to appear after multiple replies",
           "placeholder": "Replies"
         }
     ]

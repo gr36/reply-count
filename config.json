@@ -3,6 +3,7 @@
       "reply_count_show_emoji": true,
       "reply_count_emoji_before": "👋",
       "reply_count_show_text": true,
-      "reply_count_text_after": "Replies"
+      "reply_count_text_single": "Reply",
+      "reply_count_text_multiple": "Replies"
     }
   }
